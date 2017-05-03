@@ -1,0 +1,51 @@
+html, body {
+	min-width: 250px;
+}
+
+.header {
+	min-height: 85px;
+	color: #FFFFFF;
+	background: url("../images/piano90.jpg");
+	background-size: contain;
+	background-repeat: repeat;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.header h1 {
+	margin: 0;
+	font-family: 'Eagle Lake', cursive;
+}
+
+.right-panel {
+	background: url("../images/right-panel.jpg");
+	background-repeat: repeat;
+}
+
+.right-panel p {
+	margin-top: 12px;
+	margin-left: 12px;
+}
+
+.right-panel div {
+	margin-left: 12px;
+	margin-bottom: 12px;
+}
+
+.footer {
+	height: 85px;
+	background: url("../images/notes40.png");
+	background-size: contain;
+	background-repeat: repeat;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+/* PC */
+@media screen and (min-width: 992px) {
+	.right-panel {
+		height: 400px;
+	}
+}

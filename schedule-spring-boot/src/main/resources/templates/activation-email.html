@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Account activation request</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+	<h3 th:text="'Welcome ' + ${name} + '!'"></h3>
+	<p>Thank you for registering with the Music Lessons Schedule web
+		site. To activate your account, follow the link below within the next
+		24 hours:</p>
+	<a th:href="@{'http://localhost:8080/account/#/activate/'+${token}}">Activate account</a>
+	<!-- <a th:href="@{'https://schedule.cfapps.io/#/activate/'+${token}}">Activate account</a> -->
+	<p>Then you can login with the email and password you selected
+		during registration.</p>
+	<p>
+		<i>
+			Webmaster
+			<br></br>
+			MusicLessonsSchedule
+		</i>
+	</p>
+</body>
+</html>
+
+
+
+

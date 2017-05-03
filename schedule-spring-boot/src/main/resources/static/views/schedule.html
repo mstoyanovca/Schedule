@@ -1,0 +1,147 @@
+<div class="header">
+  <h4>
+  	<i>Teacher: {{ctrl.teacherName}}</i>
+  </h4>
+</div>
+
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+      		data-target="#students-navbar" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="">Schedule</a>
+    </div>
+    <div class="collapse navbar-collapse" id="students-navbar">
+      <ul class="nav navbar-nav">
+      	<li>
+      		<a href="" ng-click="ctrl.create()">
+      			<i class="fa fa-plus fa-fw" aria-hidden="true"></i> Add Lesson
+      		</a>
+      	</li>
+      	<li>
+      		<a href="/#/students">
+      			<i class="fa fa-list fa-fw" aria-hidden="true"></i> Students
+      		</a>
+      	</li>  
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" 
+          		aria-expanded="false">
+          	<i class="fa fa-cog fa-fw" aria-hidden="true"></i> Options
+          </a>
+          <ul class="dropdown-menu">
+            <li>
+            	<a href="/#/account">
+            		<i class="fa fa-address-card fa-fw" aria-hidden="true"></i> Account
+            	</button>
+            </li>
+            <li>
+            	<a href="" ng-click="ctrl.logout()">
+            		<i class="fa fa-sign-out fa-fw" aria-hidden="true"></i> Logout
+            	</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div uib-carousel active="ctrl.active" id="marto">
+	<div uib-slide ng-repeat="tab in ctrl.tabs track by tab.id" index="tab.id" 
+		ng-swipe-left="$parent.$parent.next()" ng-swipe-right="$parent.$parent.prev()">
+		<div class="carousel-heading">
+			<h4><i>{{tab.title}}</i></h4>
+		</div>
+		<div class="row hidden-xs">
+			<div class="col-sm-1"></div>
+			<div class="col-sm-1 text-left"><h4><i>Start</i></h4></div>
+            <div class="col-sm-1 text-left"><h4><i>End</i></h4></div>
+            <div class="col-sm-3 text-left"><h4><i>Name</i></h4></div>
+            <div class="col-sm-3 text-left"><h4><i>Notes</i></h4></div>
+            <div class="col-sm-3"></div>
+            <hr class="col-sm-12">
+		</div>
+		<div ng-repeat="lesson in ctrl.lessons | orderBy: ['startTime', 'endTime']" 
+        		ng-if = "tab.title.toLowerCase() == lesson.dow.toLowerCase()">
+        	<div class="row hidden-xs">
+        		<div class="col-sm-1"></div>
+	    		<div class="col-sm-1 text-left">{{lesson.startTime | date: "HH:mm"}}</div>
+	    		<div class="col-sm-1 text-left">{{lesson.endTime | date: "HH:mm"}}</div>
+	        	<div class="col-sm-3 text-left name">{{lesson.student.name}}</div>
+	        	<div class="col-sm-3 text-left note">{{lesson.note}}</div>
+	        	<div class="col-sm-2 text-left">
+	        		<button type="button" ng-click="ctrl.edit(lesson)" class="btn btn-info btn-sm">
+	            		<span class="glyphicon glyphicon-pencil"></span>
+	            	</button>
+	            	<button type="button" ng-click="ctrl.remove(lesson)" class="btn btn-danger btn-sm">
+	            		<span class="glyphicon glyphicon-remove"></span>
+	            	</button>
+	        	</div>
+				<div class="col-sm-1"></div>
+	        </div>
+	        <div class="row visible-xs">
+        		<div class="col-xs-1"></div>
+        		<div class="col-xs-2 text-left"><b><i>Start</i></b></div>
+	    		<div class="col-xs-8 text-left">{{lesson.startTime | date: "HH:mm"}}</div>
+	    		<div class="col-xs-1"></div>
+	    	</div>
+	    	<div class="row visible-xs">
+	    		<div class="col-xs-1"></div>
+	    		<div class="col-xs-2 text-left"><b><i>End</i></b></div>	
+	    		<div class="col-xs-8 text-left">{{lesson.endTime | date: "HH:mm"}}</div>
+	    		<div class="col-xs-1"></div>
+	    	</div>
+	    	<div class="row visible-xs">
+	    		<div class="col-xs-1"></div>
+	    		<div class="col-xs-2 text-left"><b><i>Name</i></b></div>
+	        	<div class="col-xs-8 text-left name">{{lesson.student.name}}</div>
+	        	<div class="col-xs-1"></div>
+	        </div>
+	        <div class="row visible-xs">
+	        	<div class="col-xs-1"></div>
+	        	<div class="col-xs-2 text-left"><b><i>Notes</i></b></div>
+	        	<div class="col-xs-8 text-left note">{{lesson.note}}</div>
+	        	<div class="col-xs-1"></div>
+	        </div>
+	        <div class="row visible-xs">
+	        	<div class="col-xs-3"></div>
+	        	<div class="col-xs-8 text-left">
+	        		<button type="button" ng-click="ctrl.edit(lesson)" class="btn btn-info btn-sm">
+	            		<span class="glyphicon glyphicon-pencil"></span>
+	            	</button>
+	            	<button type="button" ng-click="ctrl.remove(lesson)" class="btn btn-danger btn-sm">
+	            		<span class="glyphicon glyphicon-remove"></span>
+	            	</button>
+	        	</div>
+	        	<div class="col-xs-1"></div>
+	        </div>
+	        <div class="row">
+	        	<hr class="col-xs-12">
+	        </div>
+        </div>
+        <div class="carousel-footer"></div>
+    </div>
+</div>
+
+
+		
+		
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

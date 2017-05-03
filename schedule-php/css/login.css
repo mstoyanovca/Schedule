@@ -1,0 +1,120 @@
+div.topImage
+{
+  width: 960px;
+  height: 150px;
+  margin: 0px auto;
+  background: url(../images/piano.jpg) repeat;
+  border: 1px solid black;
+}
+
+div.topTransbox
+{
+  width: 960px;
+  height: 150px;
+  background-color: white;
+  opacity: 0.7;
+}
+
+div.topHeading
+{
+  width: 945px;
+  height: 135px;
+  padding-top: 15px;
+  padding-left: 15px;
+}
+
+div.center
+{
+  width: 960px;
+  height: 400px;
+  margin: 0 auto;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+}
+
+div.body
+{
+  width: 480px;
+  height: 400px;
+  float: left;
+  padding-left: 15px;
+  background-color: gainsboro;
+  border-right: 1px solid black;
+}
+
+.label
+{
+    width: 100px;
+    float: left;
+}
+
+.input
+{
+    width: 300px;
+    float: left;
+}
+
+.text_box
+{
+    width: 150px;
+}
+
+.clear
+{
+    clear: both;
+}
+
+div.rss
+{
+  width: 449px;
+  height: 385px;
+  float: right;
+  padding-left: 15px;
+  padding-top: 15px;
+}
+
+#select
+{
+  width: 448px;
+  height: 25px;
+}
+
+#rssOutput
+{
+  width: 449px;
+  height: 360px;
+  overflow: scroll;
+}
+
+div.footer
+{
+  width: 960px;
+  height: 50px;
+  margin: 0 auto;
+  background: url(../images/notes.jpg) repeat;
+  border: 1px solid black;
+}
+
+div.transbox2
+{
+  width: 960px;
+  height: 50px;
+  background-color: white;
+  opacity: 0.7;
+}
+
+div.heading2
+{
+  width: 945px;
+  height: 35px;
+  padding-left: 15px;
+  padding-top: 15px;
+}
+
+a
+{
+    background: silver;
+    height: 25px;
+    margin: 5px;
+    padding: 5px, 0px, 5px, 0px;
+}

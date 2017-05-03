@@ -1,0 +1,255 @@
+{
+  "groups": [
+    {
+      "name": "facebook",
+      "type": "com.mstoyanov.schedule.security.SocialSSOConfig$ClientResources",
+      "sourceType": "com.mstoyanov.schedule.security.SocialSSOConfig",
+      "sourceMethod": "public com.mstoyanov.schedule.security.SocialSSOConfig.ClientResources facebook() "
+    },
+    {
+      "name": "facebook.client",
+      "type": "org.springframework.security.oauth2.client.token.grant.code.AuthorizationCodeResourceDetails",
+      "sourceType": "com.mstoyanov.schedule.security.SocialSSOConfig$ClientResources",
+      "sourceMethod": "public org.springframework.security.oauth2.client.token.grant.code.AuthorizationCodeResourceDetails getClient() "
+    },
+    {
+      "name": "facebook.resource",
+      "type": "org.springframework.boot.autoconfigure.security.oauth2.resource.ResourceServerProperties",
+      "sourceType": "com.mstoyanov.schedule.security.SocialSSOConfig$ClientResources",
+      "sourceMethod": "public org.springframework.boot.autoconfigure.security.oauth2.resource.ResourceServerProperties getResource() "
+    },
+    {
+      "name": "facebook.resource.jwt",
+      "type": "org.springframework.boot.autoconfigure.security.oauth2.resource.ResourceServerProperties$Jwt",
+      "sourceType": "org.springframework.boot.autoconfigure.security.oauth2.resource.ResourceServerProperties",
+      "sourceMethod": "public org.springframework.boot.autoconfigure.security.oauth2.resource.ResourceServerProperties.Jwt getJwt() "
+    },
+    {
+      "name": "linkedin",
+      "type": "com.mstoyanov.schedule.security.SocialSSOConfig$ClientResources",
+      "sourceType": "com.mstoyanov.schedule.security.SocialSSOConfig",
+      "sourceMethod": "public com.mstoyanov.schedule.security.SocialSSOConfig.ClientResources linkedin() "
+    },
+    {
+      "name": "linkedin.client",
+      "type": "org.springframework.security.oauth2.client.token.grant.code.AuthorizationCodeResourceDetails",
+      "sourceType": "com.mstoyanov.schedule.security.SocialSSOConfig$ClientResources",
+      "sourceMethod": "public org.springframework.security.oauth2.client.token.grant.code.AuthorizationCodeResourceDetails getClient() "
+    },
+    {
+      "name": "linkedin.resource",
+      "type": "org.springframework.boot.autoconfigure.security.oauth2.resource.ResourceServerProperties",
+      "sourceType": "com.mstoyanov.schedule.security.SocialSSOConfig$ClientResources",
+      "sourceMethod": "public org.springframework.boot.autoconfigure.security.oauth2.resource.ResourceServerProperties getResource() "
+    },
+    {
+      "name": "linkedin.resource.jwt",
+      "type": "org.springframework.boot.autoconfigure.security.oauth2.resource.ResourceServerProperties$Jwt",
+      "sourceType": "org.springframework.boot.autoconfigure.security.oauth2.resource.ResourceServerProperties",
+      "sourceMethod": "public org.springframework.boot.autoconfigure.security.oauth2.resource.ResourceServerProperties.Jwt getJwt() "
+    }
+  ],
+  "properties": [
+    {
+      "name": "facebook.client.access-token-uri",
+      "type": "java.lang.String",
+      "sourceType": "org.springframework.security.oauth2.client.token.grant.code.AuthorizationCodeResourceDetails"
+    },
+    {
+      "name": "facebook.client.authentication-scheme",
+      "type": "org.springframework.security.oauth2.common.AuthenticationScheme",
+      "sourceType": "org.springframework.security.oauth2.client.token.grant.code.AuthorizationCodeResourceDetails"
+    },
+    {
+      "name": "facebook.client.client-authentication-scheme",
+      "type": "org.springframework.security.oauth2.common.AuthenticationScheme",
+      "sourceType": "org.springframework.security.oauth2.client.token.grant.code.AuthorizationCodeResourceDetails"
+    },
+    {
+      "name": "facebook.client.client-id",
+      "type": "java.lang.String",
+      "sourceType": "org.springframework.security.oauth2.client.token.grant.code.AuthorizationCodeResourceDetails"
+    },
+    {
+      "name": "facebook.client.client-secret",
+      "type": "java.lang.String",
+      "sourceType": "org.springframework.security.oauth2.client.token.grant.code.AuthorizationCodeResourceDetails"
+    },
+    {
+      "name": "facebook.client.grant-type",
+      "type": "java.lang.String",
+      "sourceType": "org.springframework.security.oauth2.client.token.grant.code.AuthorizationCodeResourceDetails"
+    },
+    {
+      "name": "facebook.client.id",
+      "type": "java.lang.String",
+      "sourceType": "org.springframework.security.oauth2.client.token.grant.code.AuthorizationCodeResourceDetails"
+    },
+    {
+      "name": "facebook.client.pre-established-redirect-uri",
+      "type": "java.lang.String",
+      "sourceType": "org.springframework.security.oauth2.client.token.grant.code.AuthorizationCodeResourceDetails"
+    },
+    {
+      "name": "facebook.client.scope",
+      "type": "java.util.List<java.lang.String>",
+      "sourceType": "org.springframework.security.oauth2.client.token.grant.code.AuthorizationCodeResourceDetails"
+    },
+    {
+      "name": "facebook.client.token-name",
+      "type": "java.lang.String",
+      "sourceType": "org.springframework.security.oauth2.client.token.grant.code.AuthorizationCodeResourceDetails"
+    },
+    {
+      "name": "facebook.client.use-current-uri",
+      "type": "java.lang.Boolean",
+      "sourceType": "org.springframework.security.oauth2.client.token.grant.code.AuthorizationCodeResourceDetails"
+    },
+    {
+      "name": "facebook.client.user-authorization-uri",
+      "type": "java.lang.String",
+      "sourceType": "org.springframework.security.oauth2.client.token.grant.code.AuthorizationCodeResourceDetails"
+    },
+    {
+      "name": "facebook.resource.id",
+      "type": "java.lang.String",
+      "sourceType": "org.springframework.boot.autoconfigure.security.oauth2.resource.ResourceServerProperties"
+    },
+    {
+      "name": "facebook.resource.jwt.key-uri",
+      "type": "java.lang.String",
+      "sourceType": "org.springframework.boot.autoconfigure.security.oauth2.resource.ResourceServerProperties$Jwt"
+    },
+    {
+      "name": "facebook.resource.jwt.key-value",
+      "type": "java.lang.String",
+      "sourceType": "org.springframework.boot.autoconfigure.security.oauth2.resource.ResourceServerProperties$Jwt"
+    },
+    {
+      "name": "facebook.resource.prefer-token-info",
+      "type": "java.lang.Boolean",
+      "sourceType": "org.springframework.boot.autoconfigure.security.oauth2.resource.ResourceServerProperties"
+    },
+    {
+      "name": "facebook.resource.service-id",
+      "type": "java.lang.String",
+      "sourceType": "org.springframework.boot.autoconfigure.security.oauth2.resource.ResourceServerProperties"
+    },
+    {
+      "name": "facebook.resource.token-info-uri",
+      "type": "java.lang.String",
+      "sourceType": "org.springframework.boot.autoconfigure.security.oauth2.resource.ResourceServerProperties"
+    },
+    {
+      "name": "facebook.resource.token-type",
+      "type": "java.lang.String",
+      "sourceType": "org.springframework.boot.autoconfigure.security.oauth2.resource.ResourceServerProperties"
+    },
+    {
+      "name": "facebook.resource.user-info-uri",
+      "type": "java.lang.String",
+      "sourceType": "org.springframework.boot.autoconfigure.security.oauth2.resource.ResourceServerProperties"
+    },
+    {
+      "name": "linkedin.client.access-token-uri",
+      "type": "java.lang.String",
+      "sourceType": "org.springframework.security.oauth2.client.token.grant.code.AuthorizationCodeResourceDetails"
+    },
+    {
+      "name": "linkedin.client.authentication-scheme",
+      "type": "org.springframework.security.oauth2.common.AuthenticationScheme",
+      "sourceType": "org.springframework.security.oauth2.client.token.grant.code.AuthorizationCodeResourceDetails"
+    },
+    {
+      "name": "linkedin.client.client-authentication-scheme",
+      "type": "org.springframework.security.oauth2.common.AuthenticationScheme",
+      "sourceType": "org.springframework.security.oauth2.client.token.grant.code.AuthorizationCodeResourceDetails"
+    },
+    {
+      "name": "linkedin.client.client-id",
+      "type": "java.lang.String",
+      "sourceType": "org.springframework.security.oauth2.client.token.grant.code.AuthorizationCodeResourceDetails"
+    },
+    {
+      "name": "linkedin.client.client-secret",
+      "type": "java.lang.String",
+      "sourceType": "org.springframework.security.oauth2.client.token.grant.code.AuthorizationCodeResourceDetails"
+    },
+    {
+      "name": "linkedin.client.grant-type",
+      "type": "java.lang.String",
+      "sourceType": "org.springframework.security.oauth2.client.token.grant.code.AuthorizationCodeResourceDetails"
+    },
+    {
+      "name": "linkedin.client.id",
+      "type": "java.lang.String",
+      "sourceType": "org.springframework.security.oauth2.client.token.grant.code.AuthorizationCodeResourceDetails"
+    },
+    {
+      "name": "linkedin.client.pre-established-redirect-uri",
+      "type": "java.lang.String",
+      "sourceType": "org.springframework.security.oauth2.client.token.grant.code.AuthorizationCodeResourceDetails"
+    },
+    {
+      "name": "linkedin.client.scope",
+      "type": "java.util.List<java.lang.String>",
+      "sourceType": "org.springframework.security.oauth2.client.token.grant.code.AuthorizationCodeResourceDetails"
+    },
+    {
+      "name": "linkedin.client.token-name",
+      "type": "java.lang.String",
+      "sourceType": "org.springframework.security.oauth2.client.token.grant.code.AuthorizationCodeResourceDetails"
+    },
+    {
+      "name": "linkedin.client.use-current-uri",
+      "type": "java.lang.Boolean",
+      "sourceType": "org.springframework.security.oauth2.client.token.grant.code.AuthorizationCodeResourceDetails"
+    },
+    {
+      "name": "linkedin.client.user-authorization-uri",
+      "type": "java.lang.String",
+      "sourceType": "org.springframework.security.oauth2.client.token.grant.code.AuthorizationCodeResourceDetails"
+    },
+    {
+      "name": "linkedin.resource.id",
+      "type": "java.lang.String",
+      "sourceType": "org.springframework.boot.autoconfigure.security.oauth2.resource.ResourceServerProperties"
+    },
+    {
+      "name": "linkedin.resource.jwt.key-uri",
+      "type": "java.lang.String",
+      "sourceType": "org.springframework.boot.autoconfigure.security.oauth2.resource.ResourceServerProperties$Jwt"
+    },
+    {
+      "name": "linkedin.resource.jwt.key-value",
+      "type": "java.lang.String",
+      "sourceType": "org.springframework.boot.autoconfigure.security.oauth2.resource.ResourceServerProperties$Jwt"
+    },
+    {
+      "name": "linkedin.resource.prefer-token-info",
+      "type": "java.lang.Boolean",
+      "sourceType": "org.springframework.boot.autoconfigure.security.oauth2.resource.ResourceServerProperties"
+    },
+    {
+      "name": "linkedin.resource.service-id",
+      "type": "java.lang.String",
+      "sourceType": "org.springframework.boot.autoconfigure.security.oauth2.resource.ResourceServerProperties"
+    },
+    {
+      "name": "linkedin.resource.token-info-uri",
+      "type": "java.lang.String",
+      "sourceType": "org.springframework.boot.autoconfigure.security.oauth2.resource.ResourceServerProperties"
+    },
+    {
+      "name": "linkedin.resource.token-type",
+      "type": "java.lang.String",
+      "sourceType": "org.springframework.boot.autoconfigure.security.oauth2.resource.ResourceServerProperties"
+    },
+    {
+      "name": "linkedin.resource.user-info-uri",
+      "type": "java.lang.String",
+      "sourceType": "org.springframework.boot.autoconfigure.security.oauth2.resource.ResourceServerProperties"
+    }
+  ],
+  "hints": []
+}

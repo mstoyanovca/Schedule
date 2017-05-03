@@ -1,0 +1,105 @@
+<div class="header">
+  <h4>
+  	<i>Teacher: {{ctrl.teacherName}}</i>
+  </h4>
+</div>
+
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+      		data-target="#students-navbar" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="">Students</a>
+    </div>
+    <div class="collapse navbar-collapse" id="students-navbar">
+      <ul class="nav navbar-nav">
+      	<li>
+      		<a href="" ng-click="ctrl.create()">
+      			<i class="fa fa-user-plus fa-fw" aria-hidden="true"></i> Add Student
+      		</a>
+      	</li>
+      	<li>
+      		<a href="/#/schedule">
+      			<i class="fa fa-calendar fa-fw" aria-hidden="true"></i> Schedule
+      		</a>
+      	</li>  
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" 
+          		aria-expanded="false">
+          	<i class="fa fa-cog fa-fw" aria-hidden="true"></i> Options
+          </a>
+          <ul class="dropdown-menu">
+            <li>
+            	<a href="/#/account">
+            		<i class="fa fa-address-card fa-fw" aria-hidden="true"></i> Account
+            	</button>
+            </li>
+            <li>
+            	<a href="" ng-click="ctrl.logout()">
+            		<i class="fa fa-sign-out fa-fw" aria-hidden="true"></i> Logout
+            	</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Students list accordion -->
+<div class="row">
+	<div class="col-sm-8">
+		<script type="text/ng-template" id="group-template.html">
+    		<div class="panel-heading">
+      			<h4 class="panel-title" style="color:#fa39c3">
+        			<a href tabindex="0" class="accordion-toggle" ng-click="toggleOpen()" uib-accordion-transclude="heading">
+          				<span uib-accordion-header ng-class="{'text-muted': isDisabled}">
+            				{{heading}}
+          				</span>
+        			</a>
+      			</h4>
+    		</div>
+    		<div class="panel-collapse collapse" uib-collapse="!isOpen">
+      			<div class="panel-body" style="text-align: right" ng-transclude></div>
+    		</div>
+  		</script>
+		<uib-accordion> 
+			<div uib-accordion-group class="panel-default" heading="{{student.name}}" ng-repeat="student in ctrl.students | orderBy:'name'">
+				<ul>
+					<li ng-repeat="phone in student.phones"><p class="note">{{phone.number + " " + phone.type}}</p></li>
+				</ul>
+				<p class="note">{{student.note}}</p>
+				<br>
+				<button class="btn btn-info btn-sm" ng-click="ctrl.edit(student)" title="Edit">
+					<span class="glyphicon glyphicon-pencil"></span>
+				</button>
+				<button class="btn btn-danger btn-sm" ng-click="ctrl.remove(student)" title="Delete">
+					<span class="glyphicon glyphicon-remove"></span>
+				</button>
+			</div> 
+		</uib-accordion>
+	</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

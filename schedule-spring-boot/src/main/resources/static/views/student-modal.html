@@ -1,0 +1,101 @@
+<!-- Add/edit student form, nested in a modal -->
+<div class="modal-header">
+	<h3 class="modal-title">Student details</h3>
+</div>
+<div class="modal-body">
+	<form class="form-horizontal" name="studentForm" novalidate>
+		<!-- Name -->
+		<div class="form-group" ng-class="{'has-success': studentForm.name.$dirty &&
+				studentForm.name.$valid, 'has-error': studentForm.name.$dirty && 
+				studentForm.name.$invalid}">
+			<label for="name" class="col-sm-1 control-label">Name</label>
+			<div class="col-sm-11">
+				<input type="text" id="name" name="name" ng-model="$ctrl.student.name"
+					class="form-control" placeholder="Enter student's name." required
+					ng-maxlength="50" />
+			</div>
+			<div class="col-sm-offset-1 col-sm-11">
+				<div ng-show="studentForm.name.$dirty">
+					<span ng-show="studentForm.name.$error.required">
+						Name is required.
+					</span>
+					<span ng-show="studentForm.name.$error.maxlength">
+						Max length is 64 characters.
+					</span>
+				</div>
+			</div>
+		</div>
+		<!-- Phone -->
+		<div ng-form="phoneForm" class="form-group" ng-repeat="phone in $ctrl.student.phones"
+			ng-class="{'has-success': phoneForm.number.$dirty &&
+				phoneForm.number.$valid, 'has-error': phoneForm.number.$dirty && 
+				phoneForm.number.$invalid}">
+			<label for="number" class="col-sm-1 control-label">Phone</label>
+			<div class="col-sm-6">
+				<input type="text" id="number" name="number" ng-model="phone.number"
+					class="form-control" placeholder="Enter student's phone number."
+					ng-maxlength="30" required>
+			</div>
+			<div class="visible-xs" style="height: 4px;"></div>
+			<div class="col-sm-3 col-xs-6">
+				<select class="form-control" name="type" ng-model="phone.type">
+					<option value="home">Home</option>
+					<option value="cell">Cell</option>
+					<option value="work">Work</option>
+					<option value="other">Other</option>
+				</select>
+			</div>
+			<div class="col-sm-1 col-xs-1">
+				<button type="button" class="btn btn-danger btn-sm"
+					ng-click="$ctrl.removePhone(phone)" title="Remove">
+					<span class="glyphicon glyphicon-remove"></span>
+				</button>
+			</div>
+			<div class="col-sm-offset-1 col-sm-11 col-xs-12">
+				<div ng-show="phoneForm.number.$dirty">
+					<span ng-show="phoneForm.number.$error.required">
+						Phone is required.
+					</span>
+					<span ng-show="phoneForm.number.$error.maxlength">
+						Max length is 30 characters.
+					</span>
+				</div>
+			</div>
+		</div>
+		<!-- Add phone button -->
+		<div class="row">
+			<div class="form-group col-sm-12">
+				<div class="col-sm-offset-1 col-xs-2">
+					<button type="button" class="btn btn-default btn-sm"
+						ng-click="$ctrl.addPhone()">Add phone</button>
+				</div>
+			</div>
+		</div>
+		<!-- Notes -->
+		<div class="row">
+			<div class="form-group col-sm-12"
+				ng-class="{'has-success': studentForm.note.$dirty &&
+					studentForm.note.$valid, 'has-error': studentForm.note.$dirty && 
+					studentForm.note.$invalid}">
+				<label for="note" class="col-sm-1 control-label">Notes</label>
+				<div class="col-sm-11">
+					<textarea class="form-control" id="note" name="note" ng-model="$ctrl.student.note"
+						rows="3" placeholder="Additional notes." ng-maxlength="256" style="resize: none;">
+					</textarea>
+				</div>
+				<div class="col-sm-offset-1 col-sm-11">
+					<div ng-show="studentForm.note.$dirty" class="error">
+						<span ng-show="studentForm.note.$error.maxlength">Max
+							length is 256 characters.</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</form>
+</div>
+<div class="modal-footer">
+	<button class="btn btn-primary btn-sm" type="button" ng-click="$ctrl.ok()"
+		ng-disabled="studentForm.$invalid">OK</button>
+	<button class="btn btn-warning btn-sm" type="button"
+		ng-click="$ctrl.cancel()">Cancel</button>
+</div>

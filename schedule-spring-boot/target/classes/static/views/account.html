@@ -1,0 +1,164 @@
+<div class="header">
+  <h4>
+  	<i>Teacher: {{ctrl.teacherName}}</i>
+  </h4>
+</div>
+			
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+      		data-target="#account-navbar" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="">Account</a>
+    </div>
+    <div class="collapse navbar-collapse" id="account-navbar">
+      <ul class="nav navbar-nav">
+      	<li>
+      		<a href="/#/schedule">
+      			<i class="fa fa-calendar fa-fw" aria-hidden="true"></i> Schedule
+      		</a>
+      	</li>
+      	<li>
+      		<a href="/#/students">
+      			<i class="fa fa-list fa-fw" aria-hidden="true"></i> Students
+      		</a>
+      	</li>  
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+        	<a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" 
+          			aria-expanded="false">
+          		<i class="fa fa-cog fa-fw" aria-hidden="true"></i> Options
+          	</a>
+          	<ul class="dropdown-menu">
+            	<li>
+            		<a href="" ng-click="ctrl.delete()">
+            			<i class="fa fa-trash fa-fw" aria-hidden="true"></i> Delete Account
+            		</a>
+            	</li>
+            	<li>
+            		<a href="" ng-click="ctrl.logout()">
+            			<i class="fa fa-sign-out fa-fw" aria-hidden="true"></i> Logout
+            		</a>
+            	</li>
+          	</ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<form name="accountForm" ng-submit="ctrl.update()" class="form-horizontal" novalidate>
+	<!-- Name -->
+	<div class="form-group" ng-class="{'has-success has-feedback': accountForm.name.$valid, 
+		'has-error': accountForm.name.$dirty && accountForm.name.$invalid}">
+		<label for="name" class="col-sm-3 control-label">Name</label>
+		<div class="col-sm-7">
+			<input type="text" id="name" name="name" ng-model="ctrl.teacher.name" class="form-control"
+				placeholder="Name" required ng-maxlength="64">
+		</div>
+		<div class="col-sm-offset-3 col-sm-7">
+			<div ng-show="accountForm.name.$dirty">
+				<span ng-show="accountForm.name.$error.required">Name is required.</span> 
+				<span ng-show="accountForm.name.$error.maxlength">Max length is 64 characters.</span>
+			</div>
+		</div>
+	</div>
+    <!-- Email -->
+	<div class="form-group" ng-class="{'has-success': accountForm.email.$valid, 
+			'has-error': accountForm.email.$dirty && accountForm.email.$invalid}">
+		<label for="email" class="col-sm-3 control-label">Email</label>
+		<div class="col-sm-7">
+			<input type="email" id="email" name="email" ng-model="ctrl.teacher.user.email"
+				class="form-control" placeholder="Email" required ng-maxlength="64" change-email>
+		</div>
+		<div class="col-sm-offset-3 col-sm-7">
+			<div ng-show="accountForm.email.$dirty" class="error">
+				<span ng-show="accountForm.email.$error.required">Email is required.</span>
+				<span ng-show="!accountForm.email.$error.required &&
+							   !accountForm.email.$error.maxlength &&
+							   !accountForm.email.$error.changeEmail && 
+							   accountForm.email.$invalid">Email is invalid.</span>
+				<span ng-show="accountForm.email.$error.maxlength">Max length is 64 characters.</span>
+				<!-- Custom asynchronous validation: -->
+				<span ng-show="accountForm.email.$pending.changeEmail">Checking if this email is available...</span>
+	   			<span ng-show="accountForm.email.$error.changeEmail">This email is already registered.</span>
+			</div>
+		</div>
+	</div>
+	<!-- Password -->
+	<div class="form-group" ng-class="{'has-success': accountForm.password.$dirty &&
+			accountForm.password.$valid, 'has-error': accountForm.password.$dirty && 
+			accountForm.password.$invalid}">
+		<label for="password" class="col-sm-3 control-label">Password</label>
+		<div class="col-sm-7">
+			<input type="password" id="password" name="password" ng-model="ctrl.teacher.user.password"
+				class="form-control" placeholder="6 - 50 characters" ng-minlength="6" ng-maxlength="50"
+				required valid-password>
+		</div>
+		<div class="col-sm-offset-3 col-sm-7">
+			<div ng-show="accountForm.password.$dirty">
+				<span ng-show="accountForm.password.$error.required">Password is required.</span>
+				<span ng-show="accountForm.password.$error.minlength">Min length is 6 characters.</span>
+				<span ng-show="accountForm.password.$error.maxlength">Max length is 50 characters.</span>
+				<!-- Custom synchronous validation -->
+				<span ng-show="!accountForm.password.$error.required &&
+							   !accountForm.password.$error.minlength &&
+							   !accountForm.password.$error.maxlength &&
+							   accountForm.password.$error.validPassword">
+					Password must contain an upper case and a lower case letter, a number, 
+					and a special character.
+				</span>
+			</div>
+		</div>
+	</div>
+	<!-- Confirm password -->
+	<div class="form-group" ng-class="{'has-success': accountForm.confirmPassword.$dirty &&
+				accountForm.confirmPassword.$valid, 'has-error': accountForm.confirmPassword.$dirty && 
+				accountForm.confirmPassword.$invalid}">
+		<label for="confirmPassword" class="col-sm-3 control-label">Confirm Password</label>
+		<div class="col-sm-7">
+			<input type="password" id="confirmPassword" name="confirmPassword" class="form-control"
+					ng-model="ctrl.teacher.user.confirmPassword" placeholder="Confirm password"
+					ng-minlength="6" ng-maxlength="50" required 
+				    confirm-password="ctrl.teacher.user.password">
+		</div>
+		<div class="col-sm-offset-3 col-sm-7">
+			<div ng-show="accountForm.password.$dirty && accountForm.confirmPassword.$dirty">
+				<span ng-show="accountForm.confirmPassword.$error.match">
+					Passwords don't match!
+				</span>
+			</div>
+		</div>
+	</div>
+	<!-- Button -->
+	<div class="form-group">
+		<div class="col-sm-offset-3 col-sm-7">
+			<button class="btn btn-primary" type="submit" ng-disabled="accountForm.$invalid">
+				Update
+			</button>
+		</div>
+	</div>
+</form>
+
+
+
+
+
+
+			
+		
+
+		
+		
+		
+		
+		
+		
+		
+		

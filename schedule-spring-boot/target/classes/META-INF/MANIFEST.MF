@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Implementation-Title: schedule-spring-boot
+Implementation-Version: 3.5-SNAPSHOT
+Built-By: mstoyanov
+Implementation-Vendor-Id: com.mstoyanov
+Build-Jdk: 1.8.0_121
+Implementation-URL: http://projects.spring.io/spring-boot/schedule-spr
+ ing-boot/
+Created-By: Maven Integration for Eclipse
+Implementation-Vendor: Pivotal Software, Inc.
+

@@ -1,0 +1,50 @@
+html, body {
+	min-width: 250px;
+}
+
+.header {
+	min-height: 85px;
+	margin: 25px 0 25px 0;
+	color: #FFFFFF;
+	background: url("../assets/images/piano90.jpg");
+	background-size: contain;
+	background-repeat: repeat;
+	border-radius: 8px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.header h1 {
+	margin: 0;
+	font-family: 'Eagle Lake', cursive;
+}
+
+.right-panel {
+	padding: 15px;
+	background: url("../assets/images/right-panel.jpg");
+	background-repeat: repeat;
+	border-radius: 8px;
+}
+
+.register-modal {
+	margin-top: 12px;
+}
+
+.footer {
+	margin-top: 25px;
+	height: 85px;
+	background: url("../assets/images/notes40.png");
+	background-size: contain;
+	background-repeat: repeat;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+/* PC */
+@media screen and (min-width: 992px) {
+	.right-panel {
+		height: 400px;
+	}
+}

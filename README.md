@@ -1,0 +1,1 @@
+All versions of the schedule web site. From the early PHP version, thgrough a secure Spring/JSP version with http session and single server architecture, to the latest Spring Boot/AngularJS single page apllication, secured with OAuth2/JWT and social SSO.

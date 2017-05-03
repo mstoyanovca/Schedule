@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Schedule</title>
+<!-- Favicon -->
+<link rel="apple-touch-icon" sizes="57x57" href="images/favicon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="images/favicon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="images/favicon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="images/favicon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="images/favicon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="images/favicon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="images/favicon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="images/favicon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="images/favicon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="images/favicon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+<link rel="manifest" href="images/favicon/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<!-- Bootstrap, Font Awesome -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Eagle+Lake">
+</head>
+<body>
+	<div class="container" ng-app="application" ng-cloak>
+		<ng-view></ng-view>
+		<!-- Register a new teacher modal -->
+		<script type="text/ng-template" id="register-modal.html">
+        	<!-- Content in register-modal.html -->
+    	</script>
+		<!-- Change password modal -->
+		<script type="text/ng-template" id="change-password-modal.html">
+        	<!-- Content in reset-password.html -->
+    	</script>
+		<!-- Scripts -->
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular-route.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.0/angular-cookies.min.js"></script>
+		<script src="https://cdn.rawgit.com/auth0/angular-jwt/master/dist/angular-jwt.js"></script>
+		<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-animate.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-resource.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-css/1.0.8/angular-css.min.js"></script>
+		<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-touch.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.4.0/ui-bootstrap-tpls.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<script src="js/application.js"></script>
+		<script src="js/controller/login-controller.js"></script>
+		<script src="js/controller/register-modal-controller.js"></script>
+		<script src="js/controller/reset-password-modal-controller.js"></script>
+		<script src="js/controller/student-controller.js"></script>
+		<script src="js/controller/student-modal-controller.js"></script>
+		<script src="js/controller/schedule-controller.js"></script>
+		<script src="js/controller/lesson-modal-controller.js"></script>
+		<script src="js/controller/account-controller.js"></script>
+		<script src="js/controller/delete-account-modal-controller.js"></script>
+		<script src="js/controller/delete-lesson-modal-controller.js"></script>
+		<script src="js/controller/delete-student-modal-controller.js"></script>
+		<script src="js/directive/existing-email-directive.js"></script>
+		<script src="js/directive/change-email-directive.js"></script>
+		<script src="js/directive/valid-password-directive.js"></script>
+		<script src="js/directive/confirm-password-directive.js"></script>
+		<script src="js/factory/user-factory.js"></script>
+		<script src="js/factory/teacher-factory.js"></script>
+		<script src="js/factory/student-factory.js"></script>
+		<script src="js/factory/lesson-factory.js"></script>
+	</div>
+</body>
+</html>

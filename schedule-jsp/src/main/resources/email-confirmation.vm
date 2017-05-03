@@ -1,0 +1,19 @@
+<html>
+    <body>
+        <h3>
+        	Hello ${user.teacher.name},
+        </h3>
+        <p>
+        	Thank you for registering with the Music Lessons Schedule web site. 
+        	To activate your account, follow the link below within the next 24 hours:
+        </p>
+        	<a href="http://schedule.cfapps.io/activate/${user.token.token}/">Confirm email</a>
+        <p>
+        	Then you can login with the email and password you selected during registration.
+        </p>
+        <p>
+        	<i>Webmaster<br>
+        	MusicLessonsSchedule</i>
+        </p>
+    </body>
+</html>

@@ -1,0 +1,52 @@
+html, body {
+	min-width: 250px;
+}
+
+.header {
+	margin-top: 30px;
+	padding: 15px;
+	background-image: url("../images/right-panel.jpg");
+	border-radius: 4px;
+	display: flex;
+	align-content: flex-start;
+	border-radius: 4px;
+}
+
+.header h4 {
+	margin: auto 0;
+	color: #4d4d4d;
+}
+
+.carousel-heading {
+	padding: 4px;
+	background-color: #d9d9d9;
+}
+
+.carousel-footer {
+	height: 80px;
+	background-color: #d9d9d9;
+}
+
+div.name, div.note {
+	word-wrap: break-word;
+}
+
+.carousel-control {
+	width: 60px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
