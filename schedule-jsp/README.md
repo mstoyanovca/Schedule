@@ -1,4 +1,4 @@
-This is a Spring web site for scheduling lessons in a small private music school, featuring:
+This is a Spring web site for scheduling music lessons, featuring:
 - Spring Security with custom login form, database authentication, BCrypt password encoding, CSRF protection, remember-me token generation;
 - Single page application and RWD patterns, implemented with AngularJS, RESTful client side requests to the back end, and Bootstrap;
 - Front end synchronous AngularJS validation, enhanced by custom directives, backed up by back end javax validator;
