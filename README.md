@@ -1,2 +1,3 @@
-A web site for scheduling music lessons.
-Spring Boot/AngularJS single page apllication, secured with OAuth2/JWT and social SSO.
+The latest version of the schedule web site.
+
+Spring Boot/AngularJS single page application, Bootstrap, OAuth2/JWT security, social SSO, email generation with Thymeleaf template, PostgreSQL database storage.
